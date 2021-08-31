@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aarnell <aarnell@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/31 22:21:49 by aarnell           #+#    #+#             */
-/*   Updated: 2021/08/31 22:21:51 by aarnell          ###   ########.fr       */
+/*   Created: 2021/08/31 22:32:04 by aarnell           #+#    #+#             */
+/*   Updated: 2021/08/31 22:36:59 by aarnell          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(int c)
+#include "libft.h"
+
+t_list *ft_lstlast(t_list *lst)
 {
-	if (c >= 97 && c <= 122)
-		return (c - 32);
-	return (c);
+	t_list *cur;
+
+	cur = lst;
+	while (cur->next)
+		cur = cur->next;
+	return (cur);
 }
