@@ -6,7 +6,7 @@
 /*   By: aarnell <aarnell@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/01 21:44:18 by aarnell           #+#    #+#             */
-/*   Updated: 2021/09/02 20:13:45 by aarnell          ###   ########.fr       */
+/*   Updated: 2021/09/02 20:26:38 by aarnell          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*res;
 	t_list	*tmp;
 
+	if (!f || !del)
+		return (NULL);
 	res = NULL;
 	while (lst)
 	{
