@@ -6,7 +6,7 @@
 /*   By: aarnell <aarnell@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 18:52:10 by aarnell           #+#    #+#             */
-/*   Updated: 2022/02/20 18:53:50 by aarnell          ###   ########.fr       */
+/*   Updated: 2022/02/20 19:31:38 by aarnell          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,6 @@ char	**ft_del_str_from_arr(char **arr, char *str)
 	int		pos;
 	int		len;
 	char	**res;
-	char	**tmp;
 
 	len = ft_arrlen((void **)arr);
 	pos = ft_search_str_in_arr(arr, str);
