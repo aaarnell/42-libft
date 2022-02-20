@@ -6,7 +6,7 @@
 /*   By: aarnell <aarnell@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 14:10:18 by aarnell           #+#    #+#             */
-/*   Updated: 2022/02/20 18:12:36 by aarnell          ###   ########.fr       */
+/*   Updated: 2022/02/20 18:54:42 by aarnell          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,5 +74,6 @@ char	**ft_subarr_strdup(char **from, char **to, int start, size_t len);
 char	**ft_add_str_to_arr(char **arr, char *str);
 int		ft_search_str_in_arr(char **arr, char *str);
 size_t	ft_arrlen(void **arr);
+char	**ft_del_str_from_arr(char **arr, char *str);
 
 #endif
