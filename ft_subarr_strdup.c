@@ -1,39 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_add_str_to_arr.c                                :+:      :+:    :+:   */
+/*   ft_subarr_strdup.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aarnell <aarnell@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/20 14:21:45 by aarnell           #+#    #+#             */
-/*   Updated: 2022/02/20 18:10:38 by aarnell          ###   ########.fr       */
+/*   Created: 2022/02/20 17:45:30 by aarnell           #+#    #+#             */
+/*   Updated: 2022/02/20 18:14:08 by aarnell          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**ft_add_str_to_arr(char **arr, char *str)
+char	**ft_subarr_strdup(char **from, char **to, int start, size_t len)
 {
-	char	**tmp;
-	int		i;
+	size_t	i;
+	size_t	l;
 
-	i = 0;
-	while (arr && arr[i])
-		i++;
-	if (str)
-		i++;
-	tmp = malloc(sizeof(char *) * (i + 1));
-	if (!tmp)
+	if (!from || start < 0 || (size_t) start >= ft_arrlen((void **)from))
 		return (NULL);
-	tmp[i--] = NULL;
-	if (str)
+	l = ft_arrlen((void **)(from + start));
+	if (l > len)
+		l = len;
+	i = 0;
+	while (i < l)
 	{
-		tmp[i--] = ft_strdup(str);
-		if (!tmp[i + 1])
+		to[i] = ft_strdup(from[start]);
+		if (!to[i])
 		{
-			free(tmp);
+			ft_frmtrx(to);
+			free(to);
 			return (NULL);
 		}
+		i++;
+		start++;
 	}
-	return (ft_arrcpy_strdup(arr, tmp));
+	return (to);
 }
