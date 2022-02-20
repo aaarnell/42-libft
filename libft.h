@@ -6,7 +6,7 @@
 /*   By: aarnell <aarnell@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 14:10:18 by aarnell           #+#    #+#             */
-/*   Updated: 2022/02/20 14:24:10 by aarnell          ###   ########.fr       */
+/*   Updated: 2022/02/20 16:49:28 by aarnell          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,5 +71,6 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 char	**ft_arr_strdup(char **from, char **to);
 char	**ft_add_str_to_arr(char **arr, char *str);
+int		ft_search_str_in_arr(char **arr, char *str);
 
 #endif
