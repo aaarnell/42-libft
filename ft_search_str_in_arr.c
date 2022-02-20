@@ -6,7 +6,7 @@
 /*   By: aarnell <aarnell@student.21-school.ru>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 16:46:04 by aarnell           #+#    #+#             */
-/*   Updated: 2022/02/20 16:53:06 by aarnell          ###   ########.fr       */
+/*   Updated: 2022/02/20 17:07:33 by aarnell          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_search_str_in_arr(char **arr, char *str)
 {
-	int	i;
-	int	len;
+	int		i;
+	size_t	len;
 
 	if (!str || !arr)
 		return (-1);
