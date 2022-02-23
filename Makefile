@@ -21,7 +21,7 @@ SRS		= 	ft_memset.c			ft_bzero.c				ft_memcpy.c		\
 			ft_lstdelone.c		ft_lstiter.c			ft_lstlast.c	\
 			ft_lstadd_back.c	ft_lstmap.c				ft_arrcpy_strdup.c	\
 			ft_add_str_to_arr.c	ft_search_str_in_arr.c	ft_arrlen.c		\
-			ft_subarr_strdup.c	ft_del_str_from_arr.c
+			ft_subarr_strdup.c	ft_del_str_from_arr.c	ft_str_in_arrstr.c
 
 OBJS	=	$(SRS:.c=.o)
 
